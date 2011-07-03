@@ -11,6 +11,7 @@
 <% ['billing', 'shipping'].each do |address_type|
   next if address_type == 'billing' && Spree::Config[:disable_bill_address]
   address_name = "#{address_type[0...4]}_address" %>
+
 <fieldset id="<%= address_type %>">
   <legend><%= t(address_type + "_address")%></legend>
   <% if address_type == 'shipping' && !Spree::Config[:disable_bill_address] %>

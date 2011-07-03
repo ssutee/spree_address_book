@@ -28,8 +28,8 @@ CheckoutController.class_eval do
       @order.bill_address.destroy
       @order.update_attribute(:bill_address_id, @order.ship_address.id)
     else
-      @order.bill_address.update_attribute(:user_id, current_user.try(:id))
+      @order.bill_address.update_attribute(:user_id, current_user.try(:id)) unless @order.bill_address.nil?
     end
-    @order.ship_address.update_attribute(:user_id, current_user.try(:id))
+    @order.ship_address.update_attribute(:user_id, current_user.try(:id)) unless @order.ship_address.nil?
   end
 end
