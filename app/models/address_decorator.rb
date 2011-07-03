@@ -16,7 +16,11 @@ Address.class_eval do
   end
   
   def to_s
-    "#{firstname} #{lastname}: #{zipcode}, #{country}, #{state || state_name}, #{city}, #{address1} #{address2}"
+    if address2.blank?
+      "#{firstname} #{lastname}: #{address1}, #{city}, #{state || state_name}, #{country}, #{zipcode}"
+    else
+      "#{firstname} #{lastname}: #{address1} #{address2}, #{city}, #{state || state_name}, #{country}, #{zipcode}"
+    end
   end
   
   def destroy_with_saving_used
