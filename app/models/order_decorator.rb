@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 Order.class_eval do
   attr_accessible :bill_address_id, :ship_address_id
   before_validation :clone_shipping_address, :if => "Spree::Config[:disable_bill_address]"

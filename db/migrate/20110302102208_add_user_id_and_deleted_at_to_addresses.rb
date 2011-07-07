@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddUserIdAndDeletedAtToAddresses < ActiveRecord::Migration
   def self.up
     change_table :addresses do |t|

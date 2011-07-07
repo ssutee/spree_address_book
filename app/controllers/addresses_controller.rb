@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddressesController < Spree::BaseController
   rescue_from ActiveRecord::RecordNotFound, :with => :render_404
   load_and_authorize_resource

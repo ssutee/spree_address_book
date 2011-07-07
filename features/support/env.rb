@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 FEATURES_PATH = File.expand_path('../..', __FILE__)
 
 # load shared env with features

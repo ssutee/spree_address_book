@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 Address.class_eval do
   belongs_to :user
 

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 Given /^an order from registered user "([^"]*)", who has (\d+) addresses, at address step$/ do |user_data, addresses_count|
   Given "a shipping method exists"
   Given "a payment method exists"
